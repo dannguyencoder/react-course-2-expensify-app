@@ -1,45 +1,52 @@
-console.log('App.js is running!');
+class Header extends React.Component {
+    render() {
+        return (
+            <div>
+                <h1>Indecision</h1>
+                <h2>Put your life in the hands of a computer</h2>
+            </div>
+        )
+    }
+}
 
-// create app object title/subtitle
-// use title/subtitle in the template
-// render template
+class Action extends React.Component {
+    render() {
+        return (
+            <div>
+                <button>What should I do></button>
+            </div>
+        );
+    }
+}
 
-var app = {
-    title: 'Indecision App',
-    subtitle: 'Put your life in the hands of a computer'
-};
-//JSX - Javascript XML
-var template = (
+class Options extends React.Component {
+    render() {
+        return (
+            <div>
+                Options component here
+            </div>
+        );
+    }
+}
+
+class AddOption extends React.Component {
+    render() {
+        return (
+            <div>
+                AddOption Component here
+            </div>
+        );
+    }
+}
+// AddOption -> AddOption Component here
+
+const jsx = (
     <div>
-        <h1>{app.title}</h1>
-        <p>{app.subtitle}</p>
-        <ol>
-            <li>Item one</li>
-            <li>Item two</li>
-        </ol>
+        <Header />
+        <Action />
+        <Options/>
+        <AddOption/>
     </div>
 );
 
-var user = {
-    name: 'Vinh',
-    age: 23,
-    location: 'Hanoi'
-};
-var templateTwo = (
-    <div>
-        <h1>{user.name}</h1>
-        <p>Age: {user.age}</p>
-        <p>Location: {user.location}</p>
-    </div>
-);
-
-// Create a templateTwo var JSX expression
-//div
-//  h1 -> Quang Vinh
-//  p -> Age: 23
-//  p -> Location: Philadelphia
-// Render templateTwo instead of template
-
-var appRoot = document.getElementById('app');
-
-ReactDOM.render(template, appRoot);
+ReactDOM.render(jsx, document.getElementById('app'));
