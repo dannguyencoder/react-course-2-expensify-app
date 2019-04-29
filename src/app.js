@@ -1,52 +1,8 @@
-class Header extends React.Component {
-    render() {
-        return (
-            <div>
-                <h1>Indecision</h1>
-                <h2>Put your life in the hands of a computer</h2>
-            </div>
-        )
-    }
-}
+// install -> import -> use
+import React from 'react';
+import ReactDOM from 'react-dom';
+import IndecisionApp from './components/IndecisionApp';
+import 'normalize.css/normalize.css';
+import './styles/styles.scss';
 
-class Action extends React.Component {
-    render() {
-        return (
-            <div>
-                <button>What should I do></button>
-            </div>
-        );
-    }
-}
-
-class Options extends React.Component {
-    render() {
-        return (
-            <div>
-                Options component here
-            </div>
-        );
-    }
-}
-
-class AddOption extends React.Component {
-    render() {
-        return (
-            <div>
-                AddOption Component here
-            </div>
-        );
-    }
-}
-// AddOption -> AddOption Component here
-
-const jsx = (
-    <div>
-        <Header />
-        <Action />
-        <Options/>
-        <AddOption/>
-    </div>
-);
-
-ReactDOM.render(jsx, document.getElementById('app'));
+ReactDOM.render(<IndecisionApp/>, document.getElementById('app'));
